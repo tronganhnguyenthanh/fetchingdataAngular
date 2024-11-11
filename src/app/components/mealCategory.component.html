@@ -1,0 +1,42 @@
+<h1 class="text-center text-info">Learn to cook</h1>
+<div class="d-flex p-2">
+  <input 
+    type="text" 
+    class="form-control"
+    placeholder="What do you want to cook?"
+    [(ngModel)]="categoryValue"
+    (keyup.enter)="filterMealCategory()"
+   >
+</div>
+<div class="container">
+  @if(this.categoryValue === "") {
+   <p class="text-danger" style="font-size:20px">Please enter your keyword</p>
+  }
+  @else{
+    <div class="row">
+      @for(category of mealCategory?.meals; track category?.id){
+       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p-2">
+         <a [href]="category?.strSource">
+          <div class="card">
+           <img [src]="category?.strMealThumb" alt=""/>
+           <h1 
+             class="text-center text-info text-truncate p-2"
+             [title]="category?.strMeal"
+             style="cursor:pointer"
+            >
+             {{category?.strMeal}}
+           </h1>
+           <p 
+             class="text-center text-secondary text-truncate p-2" 
+             [title]="category?.strInstructions"
+             style="cursor:pointer"
+           >
+             {{category?.strInstructions}}
+           </p>
+          </div>
+         </a>
+       </div>
+      }
+    </div>
+  }
+</div>
