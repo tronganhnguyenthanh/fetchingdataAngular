@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-import { MealCategory } from './components/mealCategory.component';
+import {MealCategory} from './components/mealCategory/mealCategory.component';
 @Component({
   selector:'app-root',
   standalone:true,
   imports:[
    RouterOutlet, 
-   MealCategory
+   MealCategory,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

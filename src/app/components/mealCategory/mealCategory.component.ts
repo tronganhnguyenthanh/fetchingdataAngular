@@ -1,5 +1,5 @@
 import {Component, inject} from "@angular/core";
-import {mealCategoryService} from "../services/mealCategory.service";
+import {mealCategoryService} from "../../services/mealCategory.service";
 import {FormsModule} from "@angular/forms";
 @Component({
   selector:'app-meal-category',
