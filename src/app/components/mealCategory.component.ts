@@ -10,7 +10,7 @@ import {FormsModule} from "@angular/forms";
 })
 export class MealCategory{
   mealCategory:any = []
-  categoryValue:string = "apple"
+  categoryValue:string = ""
   mealCategories = inject(mealCategoryService)
   filterMealCategory(){
    if(this.categoryValue === ""){
