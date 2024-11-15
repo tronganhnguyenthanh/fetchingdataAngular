@@ -5,8 +5,8 @@
     class="form-control"
     placeholder="What do you want to cook?"
     [(ngModel)]="categoryValue"
-    (keyup.enter)="filterMealCategory()"
    >
+   <button type="button" class="btn btn-primary" (click)="filterMealCategory()">Search</button>
 </div>
 <div class="container">
   @if(this.categoryValue === "") {
